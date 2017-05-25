@@ -1,0 +1,12 @@
+body
+{
+  overflow: hidden;
+  margin: 0px;
+}
+
+canvas
+{
+  margin-left: 30%;
+	margin-top: 5%;
+  border: 1px solid #000;
+}
