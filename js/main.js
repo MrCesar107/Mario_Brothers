@@ -22,9 +22,72 @@
     alto: 30
   };
 
+  var plataformas = [];
+
   var fondo;
 
   var teclado = [];
+
+  function crearPlataformas()
+  {
+    plataformas.push(
+    {
+      x: (canvas.width / 2) - 160,
+      y: canvas.height / 2,
+      ancho: 320,
+      alto: 16
+    });
+
+    plataformas.push(
+    {
+      x: 0,
+      y: 160,
+      ancho: 320,
+      alto: 16
+    });
+
+    plataformas.push(
+    {
+      x: (canvas.width) - 320,
+      y: 160,
+      ancho: 320,
+      alto: 16
+    });
+
+    plataformas.push(
+    {
+      x: 0,
+      y: (canvas.height / 2) + 30,
+      ancho: 112,
+      alto: 16
+    });
+
+    plataformas.push(
+    {
+      x: canvas.width - 112,
+      y: (canvas.height / 2) + 30,
+      ancho: 112,
+      alto: 16
+    });
+
+    plataformas.push(
+    {
+      x: 0,
+      y: canvas.height - 150,
+      ancho: 304,
+      alto: 16
+    });
+
+    plataformas.push(
+    {
+      x: canvas.width - 272,
+      y: canvas.height - 150,
+      ancho: 272,
+      alto: 16
+    });
+  }
+
+  crearPlataformas();
 
   function loadMedia()
   {
@@ -86,10 +149,22 @@
     ctx.restore();
   }
 
+  function dibujarPlataformas()
+  {
+    for(var i in plataformas)
+    {
+      ctx.save();
+      ctx.fillStyle = "#2a69c7";
+      ctx.fillRect(plataformas[i].x, plataformas[i].y, plataformas[i].ancho, plataformas[i].alto);
+      ctx.restore();
+    }
+  }
+
   function main()
   {
     dibujarFondo();
     dibujarSuelo();
+    dibujarPlataformas();
     dibujarJugador();
   }
 

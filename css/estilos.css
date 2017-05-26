@@ -6,7 +6,24 @@ body
 
 canvas
 {
-  margin-left: 30%;
-	margin-top: 5%;
+  margin-left: 24%;
+	margin-top: 2%;
   border: 1px solid #000;
+}
+
+
+@media screen and (min-width: 1980px)
+{
+  body
+  {
+    overflow: hidden;
+    margin: 0px;
+  }
+
+  canvas
+  {
+    margin-left: 30%;
+  	margin-top: 5%;
+    border: 1px solid #000;
+  }
 }
