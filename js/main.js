@@ -277,8 +277,6 @@
     dibujarSuelo();
     dibujarPlataformas();
     dibujarJugador();
-
-    console.log(jugador.colisionInferiorSuelo);
   }
 
   agregarEventosTeclado();
